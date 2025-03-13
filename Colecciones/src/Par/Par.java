@@ -57,7 +57,7 @@ public class Par <T,U> {
         //copiar los valores de la primera tabla y luego la segunda
         U tablanueva[]=Arrays.copyOf(tabla1, sumalongitud);
         //copiar la segunda tabla2
-        System.arraycopy(tabla2, 0, tablanueva, tabla1.length, sumalongitud);    
+        System.arraycopy(tabla2, 0, tablanueva, tabla1.length, sumalongitud - tabla1.length);    
         return tablanueva;
     }
     

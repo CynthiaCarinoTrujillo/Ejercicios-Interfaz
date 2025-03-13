@@ -18,6 +18,6 @@ public class Principal {
         System.out.println("valor T: "+ primerPar.getValorT()+ " valor U: "+ primerPar.getvalorU());
         
         //crear arrays de t
-        Par <Integer> array[]=new Par[2];
+       
     }
 }
