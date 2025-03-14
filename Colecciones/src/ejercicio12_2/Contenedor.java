@@ -1,21 +1,27 @@
 package ejercicio12_2;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  *
  * @author cyn
  */
-public class Contenedor<T> {
+public class Contenedor<T extends Comparable<T>> {
 
     //array de T
     private T array[];
 
-    public Contenedor() {
-        this.array = (T[]) new Object[0];
+    public Contenedor(T[] tabla) {
+//        this.array = (T[]) new Object[0];
         //inicializa un array de genericos, el new objeto hace casting con el array de tipo T
-        //this.array=null;
+        this.array=tabla;
     }
+    
+    //constructor que inicializa un array con longitud de 30
+//    public Contenedor(T cantidad){
+//        this.array=(T[]) new Object[30];
+//    }
 
     void insertarAlInicio(T nuevo) {
         // modificar longitud para insertar un nuevo elemento
@@ -30,12 +36,23 @@ public class Contenedor<T> {
     void insertarAlFinal(T nuevo) {
         // Crear una nueva copia del array con una longitud mayor 
         T arraycopia[] = Arrays.copyOf(array, array.length + 1);
-
         // Insertar el nuevo elemento al final
         arraycopia[array.length] = nuevo;
-
         array = Arrays.copyOf(arraycopia, arraycopia.length);
     }
+    
+    
+    void rellenarArray() {
+    // Comprobar que el array tiene espacio disponible
+    Random random = new Random();
+    for (int i = 0; i < array.length; i++) {
+        // Generar un valor aleatorio y asignarlo
+        array[i] = (T) Integer.valueOf(random.nextInt(101)); // Números aleatorios entre 0 y 100
+    }
+}
+
+
+    
 
     void eliminarAlInicio() {
         //comprobar que el array no este vacio, si la longitud es 0 esta vacio
@@ -56,13 +73,19 @@ public class Contenedor<T> {
         }
     }
     
-    void ordenar(){
-        
-    }
-
+   
     @Override
     public String toString() {
         return "Contenedor{" + "array=" + array + '}';
     }
-
+    
+    public void ordenar() {
+        Arrays.sort(array);  // Usamos Arrays.sort para ordenar el array
+    }
+    
+    public void mostrarInformacion(){
+        for (T valor: array){
+            System.out.println(valor);
+        }
+    }
 }
