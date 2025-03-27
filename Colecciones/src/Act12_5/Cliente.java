@@ -1,4 +1,3 @@
-
 package Act12_5;
 
 import java.time.LocalDate;
@@ -8,8 +7,8 @@ import java.time.temporal.ChronoUnit;
  *
  * @author cyn
  */
-public class Cliente implements Comparable<Cliente>{
-    
+public class Cliente implements Comparable<Cliente> {
+
     String nombreCliente;
     String dniCliente;
     LocalDate fechaNacimiento;
@@ -19,10 +18,10 @@ public class Cliente implements Comparable<Cliente>{
         this.dniCliente = dniCliente;
         this.fechaNacimiento = fechaNacimiento;
     }
-    
-    public int getEdad(){
-        LocalDate hoy=LocalDate.now();
-        int edadCliente= (int) ChronoUnit.YEARS.between(fechaNacimiento,hoy);
+
+    public int getEdad() {
+        LocalDate hoy = LocalDate.now();
+        int edadCliente = (int) ChronoUnit.YEARS.between(fechaNacimiento, hoy);
         return edadCliente;
     }
 
@@ -36,8 +35,4 @@ public class Cliente implements Comparable<Cliente>{
         return dniCliente.compareTo(t.dniCliente);
     }
 
-
-   
-    
-    
 }
