@@ -1,6 +1,8 @@
 package ejercicio12_2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -88,4 +90,23 @@ public class Contenedor<T extends Comparable<T>> {
             System.out.println(valor);
         }
     }
+    
+    
+//    public <T> int[] buscarTodos(Object e){
+//    //devuelve una tabla con todas las ocurrencias de e 
+//        int tabla[]=new int[0];
+//        boolean tipo=e instanceof ;
+//        
+//        return tabla;
+//    }
+    
+    
+    public <T> List<T> eliminaRepetidos(List<T> lista){
+        //recibe una lista con elementos repetidos y devuelve otra lista eliminando los repetidos
+        List<T> listaSinRepetidos=new ArrayList<>();
+        //
+        
+        return listaSinRepetidos;
+    }
+    
 }

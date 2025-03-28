@@ -23,8 +23,10 @@ public class Prueba {
         
         PlantillaEquipo.mostrar();
         
-        String posicionelegida="Defensa";
-        PlantillaEquipo.mostrarMismaPosicion(posicionelegida);
+        String posicionelegida="DEFENSA";
+        String posicionelegida2="defensa";
+        posicionelegida2=posicionelegida2.toUpperCase();
+        PlantillaEquipo.mostrarMismaPosicion(posicionelegida2);
         
     }
 }

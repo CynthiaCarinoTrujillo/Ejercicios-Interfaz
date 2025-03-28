@@ -27,12 +27,18 @@ public class Cliente implements Comparable<Cliente> {
 
     @Override
     public String toString() {
-        return "Cliente{" + "nombreCliente=" + nombreCliente + ", dniCliente=" + dniCliente + '}';
+        return "Cliente{ " + nombreCliente + ", DNI= " + dniCliente + '}';
     }
 
     @Override
     public int compareTo(Cliente t) {
         return dniCliente.compareTo(t.dniCliente);
     }
+    
+    public boolean equals(Cliente otro){
+        return dniCliente.equals(otro.dniCliente);
+    }
+    
+    
 
 }

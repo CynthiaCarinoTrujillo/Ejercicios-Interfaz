@@ -26,6 +26,10 @@ public class Principal {
         conjuntoClientes.add(c3);
 
         System.out.println("Conjunto clientes: " + conjuntoClientes);
+        
+        //HASTSET
+        
+//        HastSet<Cliente> otroConjuntoCliente=new HastSet<>();
 
     }
     
